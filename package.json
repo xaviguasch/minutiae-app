@@ -1,0 +1,22 @@
+{
+  "name": "01-minutiae-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaviguasch/minutiae-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xaviguasch/minutiae-app/issues"
+  },
+  "homepage": "https://github.com/xaviguasch/minutiae-app#readme",
+  "dependencies": {
+    "validator": "^10.11.0"
+  }
+}
