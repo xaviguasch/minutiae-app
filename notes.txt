@@ -1,1 +1,1 @@
-My name is Xavi.
+My name is Xavi.This is an appended message to notes.txt, widh appendFileSync
