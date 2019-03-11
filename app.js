@@ -1,6 +1,4 @@
-const utils = require('./utils.js')
-
-const name = 'Xavi'
+const name = require('./utils.js')
 
 
 console.log(name);
