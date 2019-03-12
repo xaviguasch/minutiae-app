@@ -3,14 +3,23 @@ const yargs = require('yargs')
 const getNotes = require('./notes.js')
 
 
-const command = process.argv[2]
+
+// Customize yargs version
+yargs.version('1.1.0')
 
 
-console.log(process.argv);
+
+// Create add command
+yargs.command({
+    command: 'add',
+    describe: 'Add a new note',
+    handler: function () {
+        console.log('adding a new note!');
+    }
+})
 
 
-if (command === 'add') {
-    console.log('Adding a note');
-} else if (command === 'remove') {
-    console.log('Removing a note');
-}
+// add, remove, read, list
+
+
+console.log(yargs.argv);
