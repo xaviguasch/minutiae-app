@@ -14,6 +14,7 @@ const addNote = (title, body) => {
     // When it finds a duplicate it stops, uses less resources, more efficient
     const duplicateNote = notes.find(note => note.title === title)
 
+
     if (!duplicateNote) {
         notes.push({
             title: title,
@@ -55,6 +56,19 @@ const saveNotes = (notes) => {
     fs.writeFileSync('notes.json', dataJSON)
 }
 
+const readNote = (title) => {
+    const notes = loadNotes()
+
+    const foundNote = notes.find(note => note.title === title)
+
+    if (foundNote) {
+        console.log(chalk.green.inverse(foundNote.title));
+        console.log(foundNote.body);
+    } else {
+        console.log(chalk.red.inverse('There is no note with this title'));
+    }
+}
+
 
 
 const loadNotes = () => {
@@ -73,5 +87,6 @@ module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNote: readNote
 }
