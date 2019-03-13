@@ -8,9 +8,13 @@ const getNotes = () => {
 const addNote = (title, body) => {
     const notes = loadNotes()
 
-    const duplicateNotes = notes.filter(note => note.title === title)
+    // It keeps checking for duplicates for the whole array
+    // const duplicateNotes = notes.filter(note => note.title === title)
 
-    if (duplicateNotes.length === 0) {
+    // When it finds a duplicate it stops, uses less resources, more efficient
+    const duplicateNote = notes.find(note => note.title === title)
+
+    if (!duplicateNote) {
         notes.push({
             title: title,
             body: body
